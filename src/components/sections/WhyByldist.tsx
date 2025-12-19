@@ -68,183 +68,183 @@ const FeatureCard = memo(function FeatureCard({
   }), [shouldReduceMotion]);
 
   // Large card (01)
-  if (index === 0) {
-    return (
-      <motion.div
-        variants={variants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: animationDuration, delay }}
-        className="lg:col-span-7 group"
-      >
-        <div className="relative h-full min-h-[240px] sm:min-h-[260px] md:min-h-[280px] p-5 sm:p-6 lg:p-8 bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300 border border-transparent">
-          <span className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 text-[8rem] sm:text-[10rem] md:text-[12rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
-            01
-          </span>
-
-          <div className="relative z-10 flex flex-col h-full">
-            <div className="flex items-start justify-between mb-4 sm:mb-6">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-accent text-accent-foreground">
-                <Layers className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
-              </div>
-              <span className="text-[10px] sm:text-xs font-medium text-accent text-shadow-solid tracking-wider uppercase bg-accent/10 px-2 py-1 sm:px-3 sm:py-1.5">
-                {feature.highlight}
-              </span>
-            </div>
-
-            <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-medium text-foreground mb-2 sm:mb-3">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-md">
-              {feature.description}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    );
-  }
-
-  // Shield card (02)
-  if (index === 1) {
-    return (
-      <motion.div
-        variants={variants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: animationDuration, delay }}
-        className="lg:col-span-5 group"
-      >
-        <div className="relative h-full min-h-[240px] sm:min-h-[260px] md:min-h-[280px] p-5 sm:p-6 lg:p-8 border border-transparent bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300">
-          <span className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-2 text-[7rem] sm:text-[9rem] md:text-[10rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
-            02
-          </span>
-
-          <div className="relative z-10 flex flex-col h-full">
-            <div className="flex items-center gap-3 mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-accent bg-accent">
-                <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
-              </div>
-              <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
-            </div>
-
-            <span className="text-[10px] sm:text-xs font-medium text-accent text-shadow-solid tracking-wider uppercase mb-1 sm:mb-2">
-              {feature.highlight}
-            </span>
-            <h3 className="font-display text-base sm:text-lg font-medium text-foreground mb-2 sm:mb-3">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    );
-  }
-
-  // Clock card (03)
-  if (index === 2) {
-    return (
-      <motion.div
-        variants={variants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: animationDuration, delay }}
-        className="lg:col-span-5 group"
-      >
-        <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 bg-secondary text-foreground overflow-hidden hover:border-accent/50 transition-colors duration-300 border border-transparent">
-          <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-2 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
-            03
-          </span>
-
-          <div className="relative z-10 flex flex-col h-full">
-            <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent">
-                <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
-              </div>
-              <span className="text-[10px] sm:text-xs font-medium tracking-wider uppercase text-accent text-shadow-solid">
-                {feature.highlight}
-              </span>
-            </div>
-
-            <h3 className="font-display text-base sm:text-lg font-medium mb-1.5 sm:mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    );
-  }
-
-  // HardHat card (04)
-  if (index === 3) {
-    return (
-      <motion.div
-        variants={variants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        transition={{ duration: animationDuration, delay }}
-        className="lg:col-span-4 group"
-      >
-        <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 border border-transparent bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300">
-          <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-1 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
-            04
-          </span>
-
-          <div className="relative z-10 flex flex-col h-full">
-            <div className="flex items-start justify-between mb-3 sm:mb-4">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent">
-                <HardHat className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
-              </div>
-            </div>
-
-            <h3 className="font-display text-sm sm:text-base font-medium text-foreground mb-1.5 sm:mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        </div>
-      </motion.div>
-    );
-  }
-
-  // BarChart card (05)
+  // if (index === 0) {
   return (
     <motion.div
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: animationDuration, delay }}
-      className="lg:col-span-3 group"
+      className={`group ${index === 4 ? 'md:col-span-2 lg:col-span-1' : ''}`}
     >
-      <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 bg-secondary text-accent-foreground overflow-hidden border border-transparent hover:border-accent/50 transition-colors duration-300">
-        <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-1 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
-          05
+      <div className="relative h-full min-h-[240px] sm:min-h-[260px] md:min-h-[280px] p-5 sm:p-6 lg:p-8 bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300 border border-transparent">
+        <span className="absolute -bottom-6 -right-2 sm:-bottom-8 sm:-right-4 text-[8rem] sm:text-[10rem] md:text-[12rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
+          {String(index + 1).padStart(2, '0')}
         </span>
 
         <div className="relative z-10 flex flex-col h-full">
-          <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent mb-3 sm:mb-4">
-            <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
+          <div className="flex items-start justify-between mb-4 sm:mb-6">
+            <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center bg-accent text-accent-foreground">
+              <Layers className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.5} />
+            </div>
+            <span className="text-[10px] sm:text-xs font-medium text-accent text-shadow-solid tracking-wider uppercase bg-accent/10 px-2 py-1 sm:px-3 sm:py-1.5">
+              {feature.highlight}
+            </span>
           </div>
 
-          <span className="text-[10px] sm:text-xs font-medium tracking-wider uppercase mb-1.5 sm:mb-2 opacity-80 text-accent text-shadow-solid">
-            {feature.highlight}
-          </span>
-          <h3 className="font-display text-sm sm:text-base font-medium mb-1.5 sm:mb-2 text-foreground">
+          <h3 className="font-display text-lg sm:text-xl lg:text-2xl font-medium text-foreground mb-2 sm:mb-3">
             {feature.title}
           </h3>
-          <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed max-w-md">
             {feature.description}
           </p>
         </div>
       </div>
     </motion.div>
   );
+  // }
+
+  // // Shield card (02)
+  // if (index === 1) {
+  //   return (
+  //     <motion.div
+  //       variants={variants}
+  //       initial="hidden"
+  //       animate={isInView ? "visible" : "hidden"}
+  //       transition={{ duration: animationDuration, delay }}
+  //       className="lg:col-span-5 group"
+  //     >
+  //       <div className="relative h-full min-h-[240px] sm:min-h-[260px] md:min-h-[280px] p-5 sm:p-6 lg:p-8 border border-transparent bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300">
+  //         <span className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-2 text-[7rem] sm:text-[9rem] md:text-[10rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
+  //           02
+  //         </span>
+
+  //         <div className="relative z-10 flex flex-col h-full">
+  //           <div className="flex items-center gap-3 mb-4 sm:mb-6">
+  //             <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center border border-accent bg-accent">
+  //               <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
+  //             </div>
+  //             <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+  //           </div>
+
+  //           <span className="text-[10px] sm:text-xs font-medium text-accent text-shadow-solid tracking-wider uppercase mb-1 sm:mb-2">
+  //             {feature.highlight}
+  //           </span>
+  //           <h3 className="font-display text-base sm:text-lg font-medium text-foreground mb-2 sm:mb-3">
+  //             {feature.title}
+  //           </h3>
+  //           <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+  //             {feature.description}
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </motion.div>
+  //   );
+  // }
+
+  // // Clock card (03)
+  // if (index === 2) {
+  //   return (
+  //     <motion.div
+  //       variants={variants}
+  //       initial="hidden"
+  //       animate={isInView ? "visible" : "hidden"}
+  //       transition={{ duration: animationDuration, delay }}
+  //       className="lg:col-span-5 group"
+  //     >
+  //       <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 bg-secondary text-foreground overflow-hidden hover:border-accent/50 transition-colors duration-300 border border-transparent">
+  //         <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-2 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
+  //           03
+  //         </span>
+
+  //         <div className="relative z-10 flex flex-col h-full">
+  //           <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+  //             <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent">
+  //               <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
+  //             </div>
+  //             <span className="text-[10px] sm:text-xs font-medium tracking-wider uppercase text-accent text-shadow-solid">
+  //               {feature.highlight}
+  //             </span>
+  //           </div>
+
+  //           <h3 className="font-display text-base sm:text-lg font-medium mb-1.5 sm:mb-2">
+  //             {feature.title}
+  //           </h3>
+  //           <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+  //             {feature.description}
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </motion.div>
+  //   );
+  // }
+
+  // // HardHat card (04)
+  // if (index === 3) {
+  //   return (
+  //     <motion.div
+  //       variants={variants}
+  //       initial="hidden"
+  //       animate={isInView ? "visible" : "hidden"}
+  //       transition={{ duration: animationDuration, delay }}
+  //       className="lg:col-span-4 group"
+  //     >
+  //       <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 border border-transparent bg-secondary overflow-hidden hover:border-accent/50 transition-colors duration-300">
+  //         <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-1 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
+  //           04
+  //         </span>
+
+  //         <div className="relative z-10 flex flex-col h-full">
+  //           <div className="flex items-start justify-between mb-3 sm:mb-4">
+  //             <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent">
+  //               <HardHat className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
+  //             </div>
+  //           </div>
+
+  //           <h3 className="font-display text-sm sm:text-base font-medium text-foreground mb-1.5 sm:mb-2">
+  //             {feature.title}
+  //           </h3>
+  //           <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+  //             {feature.description}
+  //           </p>
+  //         </div>
+  //       </div>
+  //     </motion.div>
+  //   );
+  // }
+
+  // // BarChart card (05)
+  // return (
+  //   <motion.div
+  //     variants={variants}
+  //     initial="hidden"
+  //     animate={isInView ? "visible" : "hidden"}
+  //     transition={{ duration: animationDuration, delay }}
+  //     className="lg:col-span-3 group"
+  //   >
+  //     <div className="relative h-full min-h-[160px] sm:min-h-[180px] lg:min-h-[200px] p-5 sm:p-6 bg-secondary text-accent-foreground overflow-hidden border border-transparent hover:border-accent/50 transition-colors duration-300">
+  //       <span className="absolute -bottom-3 -right-1 sm:-bottom-4 sm:-right-1 text-[6rem] sm:text-[7rem] md:text-[8rem] font-display font-bold text-foreground/[0.03] leading-none pointer-events-none select-none">
+  //         05
+  //       </span>
+
+  //       <div className="relative z-10 flex flex-col h-full">
+  //         <div className="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center border border-accent bg-accent mb-3 sm:mb-4">
+  //           <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-black" strokeWidth={1.5} />
+  //         </div>
+
+  //         <span className="text-[10px] sm:text-xs font-medium tracking-wider uppercase mb-1.5 sm:mb-2 opacity-80 text-accent text-shadow-solid">
+  //           {feature.highlight}
+  //         </span>
+  //         <h3 className="font-display text-sm sm:text-base font-medium mb-1.5 sm:mb-2 text-foreground">
+  //           {feature.title}
+  //         </h3>
+  //         <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
+  //           {feature.description}
+  //         </p>
+  //       </div>
+  //     </div>
+  //   </motion.div>
+  // );
 });
 
 export function WhyByldist() {
@@ -339,7 +339,7 @@ export function WhyByldist() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-3 sm:gap-4 lg:gap-5">
           {features.map((feature, index) => (
             <FeatureCard
               key={feature.id}

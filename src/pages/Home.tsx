@@ -320,7 +320,7 @@ const HeroContent = memo(function HeroContent({
       className={`relative w-full ${isMobile || reducedMotion ? '' : 'will-change-transform'}`}
     >
       <div className="container-wide pt-28 sm:pt-32 lg:pt-36 pb-24 lg:pb-32">
-        <div className="flex flex-col">
+        <div className="flex flex-col max-w-max mx-auto">
           <div className="w-full">
             {reducedMotion ? (
               <>
@@ -749,8 +749,8 @@ export default function Home() {
                       <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-accent via-accent/50 to-transparent scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-400" />
 
                       <div className="flex items-start gap-3">
-                        <div className="w-10 h-10 flex items-center justify-center bg-black/5 dark:bg-accent/10 group-hover:bg-accent dark:group-hover:bg-accent/20 rounded-lg transition-colors duration-300 flex-shrink-0">
-                          <CircleCheckBig className="w-5 h-5 text-black dark:text-accent" strokeWidth={1.5} />
+                        <div className="w-10 h-10 flex items-center justify-center bg-accent rounded-lg transition-colors duration-300 flex-shrink-0">
+                          <CircleCheckBig className="w-5 h-5 text-black" strokeWidth={1.5} />
                         </div>
 
                         <div className="min-w-0">
