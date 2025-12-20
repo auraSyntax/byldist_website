@@ -25,7 +25,7 @@ export default defineConfig(() => ({
         name: "Byldist | Architecture & Design Execution Excellence",
         short_name: "Byldist",
         description: "Bridging the execution gap between design and construction. Flawless project execution for top-tier architecture and interior design studios.",
-        theme_color: "#ccff00",
+        theme_color: "#000", // Brand color: #ccff00
         background_color: "#000",
         display: "standalone",
         scope: "/",

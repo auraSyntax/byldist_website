@@ -2,7 +2,7 @@
     "name": "Byldist | Architecture & Design Execution Excellence",
     "short_name": "Byldist",
     "description": "Bridging the execution gap between design and construction. Flawless project execution for top-tier architecture and interior design studios.",
-    "theme_color": "#ccff00",
+    "theme_color": "#000", 
     "background_color": "#000",
     "display": "standalone",
     "start_url": "/",
